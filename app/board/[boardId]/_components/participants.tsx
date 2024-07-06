@@ -28,6 +28,7 @@ export const Participants = () =>{
                     src={currentUser.info.picture}
                     name={`${currentUser.info.name} (You)`}
                     fallback= {currentUser.info.name?.[0]}
+                    borderColor={connectionIdToColor(currentUser.connectionId)}
                     />
                 )}
                 {hasMoreUsers && (
