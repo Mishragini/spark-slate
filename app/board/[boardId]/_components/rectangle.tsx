@@ -1,3 +1,4 @@
+import { colorToCss } from "@/lib/utils";
 import { ReactangleLayer } from "@/types/canvas";
 
 interface RectangleProps{
@@ -26,8 +27,8 @@ export const Reactangle = ({
         width={width}
         height={height}
         strokeWidth={1}
-        fill='#000'
-        stroke="transparent"
+        fill={fill ? colorToCss(fill) : "#000"}
+        stroke={selectionColor || "transparent"}
         />
     )
 }
