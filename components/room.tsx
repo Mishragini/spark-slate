@@ -20,7 +20,9 @@ export function Room({ children, roomId, fallback }: {
       id={roomId}
       initialPresence={{
         cursor: null,
-        selection: []
+        selection: [],
+        pencilDraft: null,
+        penColor: null
       }}
       initialStorage={{
         layers: new LiveMap<string, LiveObject<Layer>>(),
