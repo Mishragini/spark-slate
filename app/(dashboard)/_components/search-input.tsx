@@ -5,12 +5,12 @@ import { Search } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { ChangeEvent, useEffect, useState } from "react";
 import qs from 'query-string';
-import useDebounce from "@/hooks/useDebounce";
+import { useDebounceValue } from 'usehooks-ts'
 
 export const SearchInput = () => {
     const router = useRouter();
     const [value, setValue] = useState<string>("");
-    const debouncedValue = useDebounce<string>(value, 500);
+    const [debouncedValue] = useDebounceValue(value, 500);
 
     const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
         setValue(e.target.value);
