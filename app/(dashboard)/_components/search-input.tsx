@@ -2,7 +2,7 @@
 
 import { Input } from "@/components/ui/input";
 import { Search } from "lucide-react";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { ChangeEvent, useEffect, useState } from "react";
 import qs from 'query-string';
 import { useDebounceValue } from 'usehooks-ts'
